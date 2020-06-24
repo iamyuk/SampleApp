@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SampleApp</title>
+<link th:href="@{/style.css}" rel="stylesheet"></link>
+</head>
+<body>
+
+	<header class="header">
+		<div class="header__bar">
+			<h1 class="header__title">
+				<a class="title" href="/">SampleApp</a>
+			</h1>
+		</div>
+	</header>
+
+	<div class="contents">
+
+	   <div class="form">
+			<form class="post" method="post" action="/" th:object="${messageForm}">
+				<input class="name" type="text" name="name" placeholder="名前">
+				<input class="message" type="text" name="message" placeholder="メッセージ">
+				<input id="sent_button" class="sent" type="submit" value="送信">
+			</form>
+		</div>
+
+		<div class="contents_post">
+			<tr th:each="message : ${messages}">
+				<div id="sample">
+					<div class="box">
+						<div class="box1">
+							<div class="message__name" th:text="${message.name}"></div>さんの投稿：
+						</div>
+						<div class="box2">
+							<div class="message__message" th:text="${message.message}"></div>
+						</div>
+						<td>
+							<form th:action="@{/messages/{id}(id=${message.id})}" th:method="post">
+								<input class="delete-button" type="submit" value="削除"/>
+							</form>
+						</td>
+					</div>
+				</div>
+			</tr>
+		</div>
+
+	</div>
+
+	<footer class="footer"></footer>
+
+</body>
+</html>

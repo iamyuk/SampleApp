@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	font-family: 'Noto Sans JP', sans-serif;
+   	font-weight: lighter;
+}
+
+
+/* ヘッダー */
+
+header.header {
+	top: 0;
+	height: 60px;
+	padding: 10px;
+	position: fixed;
+	width: 100%;
+	background: -moz-linear-gradient(left, #7d4bab, #9dcbd1);
+  	background: -webkit-linear-gradient(left, #7d4bab, #9dcbd1);
+  	background: linear-gradient(to right, #7d4bab, #9dcbd1);
+  	z-index: 2;
+}
+
+div.header__bar {
+	width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 660px;
+}
+
+h1.header__title {
+	font-size: 20px;
+	line-height: 60px;
+	float: left;
+}
+
+a.title {
+	font-family: 'Noto Sans JP', sans-serif;
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+   	font-weight: lighter;
+}
+
+a.title:hover {
+	opacity: 0.6;
+}
+
+
+/* 投稿フォーム */
+
+div.form {
+	z-index: 1;
+	margin: 0 auto;
+	max-width: 660px;
+}
+
+form.post {
+	z-index: 1;
+	max-width: 660px;
+	margin: 130px 10px 50px;
+	position: relative;
+}
+
+input.name {
+	height:40px;
+	width: 180px;
+	margin-right: 10px;
+	border-style: solid;
+	border-color: gray;
+	border-width: thin;
+	padding: 0 5px;
+}
+
+input.message {
+	height: 40px;
+	width: 315px;
+	margin-right: 10px;
+	border-style: solid;
+	border-color: gray;
+	border-width: thin;
+	padding: 0 5px;
+}
+
+input.sent {
+	width: 90px;
+	height: 40px;
+	border-style: none;
+	background: -moz-linear-gradient(left, #7d4bab, #9dcbd1);
+  	background: -webkit-linear-gradient(left, #7d4bab, #9dcbd1);
+  	background: linear-gradient(to right, #7d4bab, #9dcbd1);
+  	color: #fff;
+}
+
+input.sent:hover {
+	opacity: o.6;
+}
+
+
+/* コンテンツ部分 */
+
+div.contents {
+	z-index: 1;
+}
+
+body {
+	background: #fff;
+}
+
+#sample {
+	margin: 0 auto;
+	max-width: 640px;
+	min-height: 90px;
+	border-left:1px solid #7d4bab;
+	border-right:1px solid #9dcbd1;
+}
+
+#sample:before,
+#sample:after {
+	content:"";
+	display:block;
+	height:1px;
+	width:100%;
+	background:-webkit-gradient(linear, left top, right bottom, from(#7d4bab), to(#9dcbd1));
+	background:-moz-linear-gradient(left, #7d4bab, #9dcbd1);
+	background:linear-gradient(left, #7d4bab, #9dcbd1);
+	margin-bottom: 15px;
+}
+
+div.box {
+	position: relative;
+	padding: 18px 30px 30px;
+}
+
+div.box1 {
+	font-size: 12px;
+	color: gray;
+}
+
+div.box2 {
+	font-size: 16px;
+	color: dimgray;
+}
+
+div.message__name {
+	display: inline-block;
+}
+
+input.delete-button {
+	right: 30px;
+	top: 18px;
+	position: absolute;
+	width: 70px;
+	font-size: 10px;
+	padding: 0;
+	height: 20px;
+	border-style: none;
+	background: -moz-linear-gradient(left, #7d4bab, #9dcbd1);
+  	background: -webkit-linear-gradient(left, #7d4bab, #9dcbd1);
+  	background: linear-gradient(to right, #7d4bab, #9dcbd1);
+  	color: #fff;
+}
+
+input.delete-button:hover {
+	opacity: 0.6;
+}
+
+
+/* フッター */
+
+footer.footer {
+	height: 60px;
+	max-width: 100%;
+}
